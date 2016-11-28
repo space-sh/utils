@@ -1,0 +1,11 @@
+_dep_install:
+    _info:
+        title: Check for dependencies.
+    _env:
+        - CMD: UTILS_DEP_INSTALL
+waitforfile:
+    _env:
+        - CMD: UTILS_WAITFORFILE -- "${waitfilelist-}" ${timeout-}
+sleep:
+    _env:
+        - CMD: UTILS_SLEEP -- ${seconds-}
