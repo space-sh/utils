@@ -14,25 +14,32 @@
 # limitations under the License.
 #
 
-#================================
-# UTILS_DEP_INSTALL
-#
-# Do nothing, but conform to /_install/ pattern.
-#
-#================================
+##================================
+## UTILS_DEP_INSTALL
+##
+## Do nothing, but conform to the
+## /_dep_install/ pattern.
+##
+##================================
 UTILS_DEP_INSTALL ()
 {
     SPACE_CMDDEP="PRINT"
     PRINT "No particular dependencies." "success"
 }
 
+##================================
+## UTILS_WAITFORFILE
+##
+## Wait for one or more files until return.
+## Optionally using timeout.
+##
+##================================
 UTILS_WAITFORFILE ()
 {
     SPACE_SIGNATURE="files [timeout]"
     SPACE_CMDDEP="PRINT"
 
-    local filelist='' file=''
-    filelist="${1}"
+    local filelist="${1}"
     shift
 
     local timeout="${1-}"
@@ -40,7 +47,7 @@ UTILS_WAITFORFILE ()
 
     PRINT "Wait for files: ${filelist}, timeout: ${timeout}." "debug"
 
-    local timeoutc="-1"
+    local timeoutc="-1" file=''
     for file in ${filelist}; do
         PRINT "Waiting for file: ${file}." "debug"
         while :; do
@@ -53,14 +60,20 @@ UTILS_WAITFORFILE ()
                     fi
                 fi
                 sleep 1
-                continue
+                continue  # Wait for the same file.
             fi
-            break
+            break  # Wait for the next file.
         done
         PRINT "Found file: ${file}." "debug"
     done
 }
 
+##================================
+## UTILS_SLEEP
+##
+## Sleep for number of seconds or indefinitely.
+##
+##================================
 UTILS_SLEEP ()
 {
     # shellcheck disable=2034

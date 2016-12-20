@@ -20,8 +20,21 @@ _dep_install:
     _env:
         - CMD: UTILS_DEP_INSTALL
 waitforfile:
+    _info:
+        title: Wait for file(s) to exist.
+        desc: |
+            Wait for one or more files to exist.
+            Possibly using timeout.
+            If timeouted it will return 1.
+        args:
+            - waitfilelist: Space separated list of files to wait for.
+            - timeout: Optional timeout in seconds before returning with error.
     _env:
         - CMD: UTILS_WAITFORFILE -- "${waitfilelist-}" ${timeout-}
 sleep:
+    _info:
+        title: Sleep for a number of seconds (or indefinitely).
+        args:
+            - sceonds: Seconds to sleep, 0 or empty means forever.
     _env:
         - CMD: UTILS_SLEEP -- ${seconds-}
