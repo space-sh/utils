@@ -1,0 +1,58 @@
+# Utils module | [![build status](https://gitlab.com/space-sh/utils/badges/master/build.svg)](https://gitlab.com/space-sh/utils/commits/master)
+
+Miscellaneous system utilities.
+
+
+## /sleep/
+	Sleep for a number of seconds (or indefinitely).
+
+
+## /waitforfile/
+	Wait for file(s) to exist.
+
+	Wait for one or more files to exist.
+	Possibly using timeout. Returns 1 on time out.
+
+
+# Functions 
+
+## UTILS\_DEP\_INSTALL ()  
+  
+  
+  
+Do nothing, but conform to the  
+/\_dep\_install/ pattern.  
+  
+  
+  
+## UTILS\_WAITFORFILE ()  
+  
+  
+  
+Wait for one or more files until return.  
+Optionally using timeout.  
+  
+### Parameters:  
+- $1: list of file paths  
+- $2: timeout in seconds (optional)  
+  
+### Returns:  
+- 0: success  
+- 1: time out  
+  
+  
+  
+## UTILS\_SLEEP ()  
+  
+  
+  
+Sleep for number of seconds or indefinitely.  
+  
+### Parameters:  
+- $1: timeout in seconds  
+  
+### Returns:  
+- Non-zero on error.  
+  
+  
+  
