@@ -19,6 +19,12 @@ _dep_install:
         title: Check for dependencies.
     _env:
         - CMD: UTILS_DEP_INSTALL
+
+_info:
+    title: Utils module
+    desc: |
+        Miscellaneous system utilities.
+
 waitforfile:
     _info:
         title: Wait for file(s) to exist.
@@ -30,6 +36,7 @@ waitforfile:
             - timeout: Optional timeout in seconds before returning with error.
     _env:
         - CMD: UTILS_WAITFORFILE -- "${waitfilelist-}" ${timeout-}
+
 sleep:
     _info:
         title: Sleep for a number of seconds (or indefinitely).

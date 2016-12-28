@@ -14,26 +14,34 @@
 # limitations under the License.
 #
 
-##================================
-## UTILS_DEP_INSTALL
-##
-## Do nothing, but conform to the
-## /_dep_install/ pattern.
-##
-##================================
+#================================
+# UTILS_DEP_INSTALL
+#
+# Do nothing, but conform to the
+# /_dep_install/ pattern.
+#
+#================================
 UTILS_DEP_INSTALL ()
 {
     SPACE_CMDDEP="PRINT"
     PRINT "No particular dependencies." "success"
 }
 
-##================================
-## UTILS_WAITFORFILE
-##
-## Wait for one or more files until return.
-## Optionally using timeout.
-##
-##================================
+#================================
+# UTILS_WAITFORFILE
+#
+# Wait for one or more files until return.
+# Optionally using timeout.
+#
+# Parameters:
+#   $1: list of file paths
+#   $2: timeout in seconds (optional)
+#
+# Returns:
+#   0: success
+#   1: time out
+#
+#================================
 UTILS_WAITFORFILE ()
 {
     SPACE_SIGNATURE="files [timeout]"
@@ -68,12 +76,18 @@ UTILS_WAITFORFILE ()
     done
 }
 
-##================================
-## UTILS_SLEEP
-##
-## Sleep for number of seconds or indefinitely.
-##
-##================================
+#================================
+# UTILS_SLEEP
+#
+# Sleep for number of seconds or indefinitely.
+#
+# Parameters:
+#   $1: timeout in seconds
+#
+# Returns:
+#   Non-zero on error.
+#
+#================================
 UTILS_SLEEP ()
 {
     # shellcheck disable=2034
@@ -93,3 +107,4 @@ UTILS_SLEEP ()
         sleep "${duration}"
     fi
 }
+
