@@ -23,7 +23,7 @@
 #================================
 UTILS_DEP_INSTALL ()
 {
-    SPACE_CMDDEP="PRINT"
+    SPACE_DEP="PRINT"
     PRINT "No particular dependencies." "ok"
 }
 
@@ -45,7 +45,7 @@ UTILS_DEP_INSTALL ()
 UTILS_WAITFORFILE ()
 {
     SPACE_SIGNATURE="files [timeout]"
-    SPACE_CMDDEP="PRINT"
+    SPACE_DEP="PRINT"
 
     local filelist="${1}"
     shift
@@ -93,7 +93,7 @@ UTILS_SLEEP ()
     # shellcheck disable=2034
     SPACE_SIGNATURE="[seconds]"
     # shellcheck disable=2034
-    SPACE_CMDDEP="PRINT"
+    SPACE_DEP="PRINT"
 
     local duration="${1:-0}"
     shift $(( $# > 0 ? 1 : 0 ))
