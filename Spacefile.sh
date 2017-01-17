@@ -55,7 +55,8 @@ UTILS_WAITFORFILE ()
 
     PRINT "Wait for files: ${filelist}, timeout: ${timeout}." "debug"
 
-    local timeoutc="-1" file=''
+    local timeoutc="-1"
+    local file=''
     for file in ${filelist}; do
         PRINT "Waiting for file: ${file}." "debug"
         while :; do
