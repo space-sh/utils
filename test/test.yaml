@@ -22,7 +22,7 @@ _info:
         they might wreak havoc on your system.
         TestRunner module wraps the tests properly.
 _env:
-    - CMD: ${_SPACEBIN} -m testrunner /run/ -- -- @{DIR}/test.yaml
+    - RUN: ${_SPACEBIN} -m testrunner /run/ -- -- @{DIR}/test.yaml
 
 _platforms:
     - type: docker
@@ -42,7 +42,7 @@ _tests:
             _env:
                 - waitfilelist: "/tmp/spacegal123 /tmp/spacegal321"
                 - timeout: 3
-                - CMDEXIT: 1
+                - SPACE_EXIT: 1
             @include: @{DIR}/../Spacefile.yaml|/waitforfile
         -
             _env:
@@ -53,6 +53,5 @@ _clean:
     _info:
         title: Do nothing.
     _env:
-        - CMDWRAP: !unset
-        - CMD: ":"
-
+        - SPACE_WRAP: !unset
+        - RUN: ":"
