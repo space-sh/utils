@@ -37,17 +37,17 @@ _platforms:
 _tests:
     -
         -
-            @include: @{DIR}/../Spacefile.yaml|/_install
+            @include: @{DIR}/../Spacefile.yaml|/_install/
         -
             _env:
                 - waitfilelist: "/tmp/spacegal123 /tmp/spacegal321"
                 - timeout: 3
                 - SPACE_EXIT: 1
-            @include: @{DIR}/../Spacefile.yaml|/waitforfile
+            @include: @{DIR}/../Spacefile.yaml|/waitforfile/
         -
             _env:
                 - seconds: 3
-            @include: @{DIR}/../Spacefile.yaml|/sleep
+            @include: @{DIR}/../Spacefile.yaml|/sleep/
 
 _clean:
     _info:
