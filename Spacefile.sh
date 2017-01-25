@@ -21,7 +21,7 @@
 # /_dep_install/ pattern.
 #
 #================================
-UTILS_DEP_INSTALL ()
+UTILS_DEP_INSTALL()
 {
     SPACE_DEP="PRINT"
     PRINT "No particular dependencies." "ok"
@@ -42,7 +42,7 @@ UTILS_DEP_INSTALL ()
 #   1: time out
 #
 #================================
-UTILS_WAITFORFILE ()
+UTILS_WAITFORFILE()
 {
     SPACE_SIGNATURE="files [timeout]"
     SPACE_DEP="PRINT"
@@ -89,7 +89,7 @@ UTILS_WAITFORFILE ()
 #   Non-zero on error.
 #
 #================================
-UTILS_SLEEP ()
+UTILS_SLEEP()
 {
     # shellcheck disable=2034
     SPACE_SIGNATURE="[seconds]"
@@ -108,4 +108,3 @@ UTILS_SLEEP ()
         sleep "${duration}"
     fi
 }
-
