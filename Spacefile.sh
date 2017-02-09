@@ -30,7 +30,7 @@ UTILS_DEP_INSTALL()
 #================================
 # UTILS_WAITFORFILE
 #
-# Wait for one or more files until return.
+# Wait for one or more files or directories.
 # Optionally using timeout.
 #
 # Parameters:
@@ -58,9 +58,9 @@ UTILS_WAITFORFILE()
     local timeoutc="-1"
     local file=''
     for file in ${filelist}; do
-        PRINT "Waiting for file: ${file}." "debug"
+        PRINT "Waiting for file/dir: ${file}." "debug"
         while :; do
-            if [ ! -f "${file}" ]; then
+            if [ ! -e "${file}" ]; then
                 if [ -n "${timeout}" ]; then
                     timeoutc=$((timeoutc+1))
                     if [ "${timeoutc}" -ge "${timeout}" ]; then
