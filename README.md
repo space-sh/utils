@@ -3,6 +3,7 @@
 Miscellaneous system utilities.
 
 
+
 ## /sleep/
 	Sleep for a number of seconds (or indefinitely).
 
@@ -12,11 +13,12 @@ Miscellaneous system utilities.
 
 	Wait for one or more files to exist.
 	Possibly using timeout. Returns 1 on time out.
+	
 
 
 # Functions 
 
-## UTILS\_DEP\_INSTALL ()  
+## UTILS\_DEP\_INSTALL()  
   
   
   
@@ -25,11 +27,11 @@ Do nothing, but conform to the
   
   
   
-## UTILS\_WAITFORFILE ()  
+## UTILS\_WAITFORFILE()  
   
   
   
-Wait for one or more files until return.  
+Wait for one or more files or directories.  
 Optionally using timeout.  
   
 ### Parameters:  
@@ -42,7 +44,7 @@ Optionally using timeout.
   
   
   
-## UTILS\_SLEEP ()  
+## UTILS\_SLEEP()  
   
   
   
