@@ -44,7 +44,7 @@ _tests:
             _env:
                 - waitfilelist: "/tmp/spacegal123 /tmp/spacegal321"
                 - timeout: 3
-                - SPACE_EXIT: 1
+                - SPACE_ASSERT_EXIT: 1
             @include: @{DIR}/../Spacefile.yaml|/waitforfile/
         -
             _env:
