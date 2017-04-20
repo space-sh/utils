@@ -18,7 +18,7 @@ space -m utils /sleep/ -- "60"
 
 Sleeps forever:
 ```sh
-space -m utils /sleep/ -- "0"
+space -m utils /sleep/
 ```
 
 Exit status code is expected to be 0 on success.

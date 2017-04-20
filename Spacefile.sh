@@ -44,7 +44,7 @@ UTILS_DEP_INSTALL()
 #================================
 UTILS_WAITFORFILE()
 {
-    SPACE_SIGNATURE="files [timeout]"
+    SPACE_SIGNATURE="files:1 [timeout]"
     SPACE_DEP="PRINT"
 
     local filelist="${1}"
@@ -83,7 +83,7 @@ UTILS_WAITFORFILE()
 # Sleep for number of seconds or indefinitely.
 #
 # Parameters:
-#   $1: timeout in seconds
+#   $1: timeout in seconds, empty means sleep forever.
 #
 # Returns:
 #   Non-zero on error.
@@ -96,10 +96,10 @@ UTILS_SLEEP()
     # shellcheck disable=2034
     SPACE_DEP="PRINT"
 
-    local duration="${1:-0}"
+    local duration="${1-}"
     shift $(( $# > 0 ? 1 : 0 ))
 
-    if [ "${duration}" -eq 0 ]; then
+    if [ -z "${duration}" ]; then
         # Sleep forever
         PRINT "Sleep forever ..." "debug"
         tail -f /dev/null

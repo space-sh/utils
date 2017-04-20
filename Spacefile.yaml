@@ -29,21 +29,28 @@ waitforfile:
     _info:
         title: Wait for file(s) to exist.
         desc: |
-            Wait for one or more files to exist.
-            Possibly using timeout. Returns 1 on time out.
+            Wait for one or more files to exist, then exit.
+            Possibly wait using timeout. Exit 1 on time out.
     _env:
         - waitfilelist:
             title: Space separated list of files to wait for.
         - timeout:
             title: Optional timeout in seconds before returning with error.
-        - RUN: UTILS_WAITFORFILE -- "${waitfilelist-}" ${timeout-}
+        - RUN: UTILS_WAITFORFILE -- "${waitfilelist}" "${timeout}"
 
 sleep:
     _info:
         title: Sleep for a number of seconds (or indefinitely).
-        args:
     _env:
         - seconds:
-            title: Seconds to sleep, 0 or empty means forever.
-        - RUN: UTILS_SLEEP -- ${seconds-}
+            title: Seconds to sleep, empty means forever.
+        - SPACE_ARGS:
+            arguments:
+                -
+                    title: Seconds to sleep, empty means forever.
+                    values:
+                        - 1
+                        - 2
+                        - 3
+        - RUN: UTILS_SLEEP -- "${seconds}"
 ...
