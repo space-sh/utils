@@ -83,7 +83,7 @@ UTILS_WAITFORFILE()
 # Sleep for number of seconds or indefinitely.
 #
 # Parameters:
-#   $1: timeout in seconds, empty means sleep forever.
+#   $1: timeout in seconds. Empty means sleep forever.
 #
 # Returns:
 #   Non-zero on error.

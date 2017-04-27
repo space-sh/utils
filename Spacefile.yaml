@@ -43,11 +43,11 @@ sleep:
         title: Sleep for a number of seconds (or indefinitely).
     _env:
         - seconds:
-            title: Seconds to sleep, empty means forever.
+            title: Seconds to sleep. Empty means forever.
         - SPACE_ARGS:
             arguments:
                 -
-                    title: Seconds to sleep, empty means forever.
+                    title: Seconds to sleep. Empty means forever.
                     values:
                         - 1
                         - 2
