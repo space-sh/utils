@@ -27,6 +27,10 @@ UTILS_DEP_INSTALL()
     PRINT "No particular dependencies." "ok"
 }
 
+
+# Disable warning about local keyword
+# shellcheck disable=2039
+
 #================================
 # UTILS_WAITFORFILE
 #
@@ -76,6 +80,10 @@ UTILS_WAITFORFILE()
         PRINT "Found file: ${file}." "debug"
     done
 }
+
+
+# Disable warning about local keyword
+# shellcheck disable=2039
 
 #================================
 # UTILS_SLEEP
