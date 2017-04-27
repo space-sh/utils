@@ -11,8 +11,8 @@ Miscellaneous system utilities.
 ## /waitforfile/
 	Wait for file(s) to exist.
 
-	Wait for one or more files to exist.
-	Possibly using timeout. Returns 1 on time out.
+	Wait for one or more files to exist, then exit.
+	Possibly wait using timeout. Exit 1 on time out.
 	
 
 
@@ -51,7 +51,7 @@ Optionally using timeout.
 Sleep for number of seconds or indefinitely.  
   
 ### Parameters:  
-- $1: timeout in seconds  
+- $1: timeout in seconds. Empty means sleep forever.  
   
 ### Returns:  
 - Non-zero on error.  
