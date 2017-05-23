@@ -2,6 +2,7 @@
 modulename: Utils
 title: Overview
 giturl: gitlab.com/space-sh/utils
+editurl: /edit/master/doc/index.md
 weight: 100
 ---
 # Utils module

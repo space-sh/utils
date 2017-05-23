@@ -2,6 +2,7 @@
 modulename: Utils
 title: /sleep/
 giturl: gitlab.com/space-sh/utils
+editurl: /edit/master/doc/sleep.md
 weight: 200
 ---
 # Utils module: Sleep

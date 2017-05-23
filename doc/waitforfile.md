@@ -2,6 +2,7 @@
 modulename: Utils
 title: /waitforfile/
 giturl: gitlab.com/space-sh/utils
+editurl: /edit/master/doc/waitforfile.md
 weight: 200
 ---
 # Utils module: Wait for file
