@@ -48,7 +48,7 @@ UTILS_DEP_INSTALL()
 #================================
 UTILS_WAITFORFILE()
 {
-    SPACE_SIGNATURE="files:1 [timeout]"
+    SPACE_SIGNATURE="files:0 [timeout]"
     SPACE_DEP="PRINT"
 
     local filelist="${1}"
