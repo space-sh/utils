@@ -1,5 +1,10 @@
 # Space Module change log - utils
 
+## [1.1.2 - 2017-08-28]
+
+* Change `waitforfile` operation to allow for empty file argument
+
+
 ## [1.1.1 - 2017-06-11]
 
 * Update documentation
