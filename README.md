@@ -1,4 +1,4 @@
-# Utils module | [![build status](https://gitlab.com/space-sh/utils/badges/master/build.svg)](https://gitlab.com/space-sh/utils/commits/master)
+# Utils module | [![build status](https://gitlab.com/space-sh/utils/badges/master/pipeline.svg)](https://gitlab.com/space-sh/utils/commits/master)
 
 Miscellaneous system utilities.
 
